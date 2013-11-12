@@ -68,7 +68,7 @@ def make_movie():
     pygame.quit()
     print "\nQuitting Pi-Mation to transcode your video.\nWarning: this will take a long time!"
     print "We recommend a frame rate between 5 (beginner) and 24 (expert)."
-    print "\nOnce complete, write 'omxplayer video.mp4' in the terminal to play your video\n."
+    print "\nOnce complete, write 'omxplayer video.mp4' in the terminal to play your video.\n"
     fps = raw_input("How many frames per second do you want your video to be?\n--> ")
     os.system("avconv -r " + str(fps) + " -i " + str((os.path.join('pics', 'image_%d.jpg'))) + " -vcodec libx264 video.mp4")
     sys.exit(0)
