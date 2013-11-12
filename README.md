@@ -1,12 +1,13 @@
 pi-mation
 =========
 Stop motion animation app for RasPi and camera module (Python 2.7). 
+
 This application was written by Russell Barnes for [Linux User & Developer magazine](http://www.linuxuser.co.uk) issue 134.
 
-Dependencies
-============
+Dependencies & installation
+===========================
 This application relies on [pygame](http://pygame.org) and [picamera](http://picamera.readthedocs.org).
-You'll obviously need to be the proud owner of a Raspberry Pi camera module.
+You'll obviously need to be the proud owner of a Raspberry Pi camera module too.
 
 If you haven't used your camera module yet you'll need to make sure your Pi is up to date
 and the camera module is initialised:
@@ -47,6 +48,9 @@ Now you can enter the pi-mation sub-directory and run pi-mation.py with the foll
 
 Usage
 =====
+Could you be the next [Nick Park](http://en.wikipedia.org/wiki/Nick_Park)? 
+Try your hand at stop motion animation with this simple, but effective RasPi application.
+
 ![Test](pi-mation/data/start_screen.jpg)
 
     
