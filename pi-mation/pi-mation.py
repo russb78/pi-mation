@@ -56,7 +56,7 @@ def animate():
     for pics in pics_list:
         anim_obj.blit(screen, (0, 0))
         pygame.display.flip()
-        play_clock.tick(float(fps))
+        play_clock.tick(10)
     camera.start_preview()
 
 def make_movie():
@@ -119,7 +119,7 @@ def main():
                     quit_app()
                 elif event.key == pygame.K_SPACE:
                     take_pic()
-                elif event.key == pygame.K_DELETE:
+                elif event.key == pygame.K_BACKSPACE:
                     delete_pic()
                 elif event.key == pygame.K_RETURN:
                     make_movie()
