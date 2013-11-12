@@ -1,6 +1,6 @@
 pi-mation
 =========
-Stop motion animation app for RasPi and camera module (Python 2.7).
+Stop motion animation app for RasPi and camera module (Python 2.7). 
 This application was written by Russell Barnes for [Linux User & Developer magazine](http://www.linuxuser.co.uk) issue 134.
 
 Dependencies
