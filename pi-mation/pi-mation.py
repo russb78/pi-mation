@@ -19,11 +19,15 @@ current_alpha, next_alpha = 255, 128
 
 # Initialise Pygame, start screen and camera
 pygame.init()
-res = pygame.display.list_modes() # automatically sets resolution to the highest possible.
-width, height = res[0] # use res[1] if you're suffering performace / screen issues
+res = pygame.display.list_modes() # 
+width, height = res[0] # automatically sets resolution to the highest / current option
+print "reported resolution:", width, "x", height
+if width > 1920 and height > 1080: # if bigger than max resolution of the pi, set it to the max
+    width, height = 1920, 1080 # if you're having problems manually set the resolution here
 start_pic = pygame.image.load(os.path.join('data', 'start_screen.jpg'))
 start_pic_fix = pygame.transform.scale(start_pic, (width, height))
-screen = pygame.display.set_mode([width, height], FULLSCREEN)
+screen = pygame.display.set_mode([width, height])
+pygame.display.toggle_fullscreen()
 play_clock = pygame.time.Clock()
 camera = picamera.PiCamera()
 camera.resolution = (width, height)
@@ -134,5 +138,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
