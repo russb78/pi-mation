@@ -31,6 +31,20 @@ Ensure they're installed with:
 
     sudo apt-get install libav-tools && sudo apt-get install omxplayer
 
+From the terminal type:
+
+    sudo apt-get install git
+
+Once installed you can clone this repository with the clone command:
+
+    cd~
+    git clone https://github.com/russb78/pi-mation.git
+
+Now you can enter the pi-mation sub-directory and run pi-mation.py with the following commands:
+
+    cd pi-mation/pi-mation
+    python pi-mation.py
+
 Usage
 =====
 ![Test](pi-mation/data/start_screen.jpg)
