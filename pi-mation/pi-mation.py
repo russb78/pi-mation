@@ -17,18 +17,16 @@ pics_taken, pre_pic = 0, 0
 pics_list = []
 current_alpha, next_alpha = 255, 128
 
-# screen resolution - make sure res matches your current screen res!
-res = [1280, 720]
-
 # Initialise Pygame, start screen and camera
 pygame.init()
+res = pygame.display.list_modes() # automatically sets resolution to the highest possible.
+width, height = res[0] # use res[1] if you're suffering performace / screen issues
 start_pic = pygame.image.load(os.path.join('data', 'start_screen.jpg'))
-start_pic_fix = pygame.transform.scale(start_pic, (res[0], res[1]))
-screen = pygame.display.set_mode([res[0], res[1]])
-pygame.display.toggle_fullscreen()
+start_pic_fix = pygame.transform.scale(start_pic, (width, height))
+screen = pygame.display.set_mode([width, height], FULLSCREEN)
 play_clock = pygame.time.Clock()
 camera = picamera.PiCamera()
-camera.resolution = (res[0], res[1])
+camera.resolution = (width, height)
 
 def take_pic():
     """Grabs an image and load it for the alpha preview and 
