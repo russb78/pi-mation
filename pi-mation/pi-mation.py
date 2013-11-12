@@ -5,6 +5,8 @@
 # Russell Barnes - 12 Nov 2013 for Linux User magazine issue 134 
 # www.linuxuser.co.uk
 
+# Just press F1 to get started!
+
 import pygame, os, sys
 import picamera
 from time import sleep
@@ -64,11 +66,10 @@ def make_movie():
     and create a movie with your pics"""
     camera.stop_preview()
     pygame.quit()
-    print "\nQuitting Pi-Mation to transcode your video. Warning: this will take a long time!"
+    print "\nQuitting Pi-Mation to transcode your video.\nWarning: this will take a long time!"
     print "We recommend a frame rate between 5 (beginner) and 24 (expert)."
+    print "\nOnce complete, write 'omxplayer video.mp4' in the terminal to play your video\n."
     fps = raw_input("How many frames per second do you want your video to be?\n--> ")
-    print "\nOnce complete, write 'omxplayer video.mp4' in the terminal to play your video back."
-    sleep(3)
     os.system("avconv -r " + str(fps) + " -i " + str((os.path.join('pics', 'image_%d.jpg'))) + " -vcodec libx264 video.mp4")
     sys.exit(0)
 
