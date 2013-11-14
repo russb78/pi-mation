@@ -65,8 +65,8 @@ The application shows a fullscreen live preview from your Raspberry Pi camera mo
 We recommend using the onion skinning mode (toggled with the Tab key) to help you line the next shot in your animation. It's also worth using when you want to delete shots (backspace). 
 This way the preview will automatically update with the previous image making it easy to get back on track after a mistake.
 
-The 'p' key will load your animation so far. It runs a fixed 10fps preview of all your shots and returns you to the live preview. 
-It can take a little while to load if you've taken lots of shots.
+The 'p' key will load your animation so far. It runs a fixed framerate  preview of all your shots and returns you to the live preview. 
+It can take a little while to load if you've taken lots of shots at a high resolution.
 
 You can press Enter to quit Pi-Mation and automatically start making a movie of all your current shots. This WILL take a long time. 
 
