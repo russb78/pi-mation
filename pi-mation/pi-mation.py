@@ -12,7 +12,7 @@ pics_taken = 0
 current_alpha, next_alpha = 128, 255
 
 # set your desired fps (~5 for beginners, 10+ for advanced users)
-fps = 5
+fps = 10
 
 # Initialise Pygame, start screen and camera
 pygame.init()
@@ -61,6 +61,7 @@ def update_display():
     screen.fill((0,0,0))
     if pics_taken > 0:
         screen.blit(prev_pic, (0, 0))
+    play_clock.tick(30)
     pygame.display.flip()
 
 def make_movie():
