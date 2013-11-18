@@ -12,7 +12,7 @@ pics_taken = 0
 current_alpha, next_alpha = 128, 255
 
 # set your desired fps (~5 for beginners, 10+ for advanced users)
-fps = 10
+fps = 5
 
 # Initialise Pygame, start screen and camera
 pygame.init()
@@ -40,9 +40,10 @@ def delete_pic():
     """Doesn't actually delete the last picture, but the preview will 
     update and it will be successfully overwritten the next time you take a shot"""
     global pics_taken, prev_pic
-    if pics_taken >= 1:
+    if pics_taken > 0:
         pics_taken -= 1
-        prev_pic = pygame.image.load(os.path.join('pics', 'image_' + str(pics_taken) + '.jpg'))
+	if pics_taken >= 1:
+	    prev_pic = pygame.image.load(os.path.join('pics', 'image_' + str(pics_taken) + '.jpg'))
         
 def animate():
     """Do a quick live preview animation of 
