@@ -25,8 +25,7 @@ At the terminal type:
 
 Next install the Python library to control the Pi camera at the command line with:
 
-    sudo apt-get install python-setuptools
-    easy_install picamera
+    sudo apt-get install python-picamera
 
 Pygame takes care of image previews, controls and animation. Install it with the following command:
 
